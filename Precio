@@ -1,0 +1,15 @@
+public class IVA {
+
+    public static void main(String[] args) {
+
+        double precio = 7500;
+        double IVA = 0.21;
+        double diferencia = precio * IVA;
+        double precioFinal = precio + diferencia;
+
+        System.out.println("Precio sin IVA " + precio);
+        System.out.println("Precio con IVA " + precioFinal);
+
+        }
+
+}
