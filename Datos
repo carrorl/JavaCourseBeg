@@ -1,0 +1,14 @@
+package Ejercicios_tema_1;
+
+public class Datos {
+
+    public static void main(String[] args) {
+
+        String name = "Esto es un string";
+        long number1l = 382384728;
+        double number2d = 2354.23;
+        boolean bool = true;
+
+        System.out.println(name + number1l + number2d + bool);
+    }
+}
