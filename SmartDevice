@@ -1,0 +1,85 @@
+public class SmartMobile{
+
+    //Clase
+
+    String marca;
+    String modelo;
+    String color;
+    double screenSize;
+
+    public SmartMobile() {
+
+    }
+
+    public SmartMobile(String marca, String modelo, String color, double screenSize) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.color = color;
+        this.screenSize = screenSize;
+    }
+
+    public static class SmartPhone extends SmartMobile {
+        int ram;
+        String sistema;
+
+        public SmartPhone() {
+            super();
+        }
+
+        public SmartPhone(String marca, String modelo, String color, double screenSize, int ram, String sistema) {
+            super(marca, modelo, color, screenSize);
+            this.ram = ram;
+            this.sistema = sistema;
+
+        }
+
+        @Override
+        public String toString() {
+            return "marca=" + marca +
+                    ", modelo=" + modelo +
+                    ", color=" + color +
+                    ", Tamaño de Pantalla=" + screenSize +
+                    ", Memoria ram=" + ram +
+                    ", sistema=" + sistema;
+        }
+    }
+
+    public static class SmartWatch extends SmartMobile {
+        int funcionalidades;
+
+        String sistemaCompatible;
+
+        public SmartWatch() {
+            super();
+        }
+
+        public SmartWatch(String marca, String modelo, String color, double screenSize, int funcionalidades, String istemaCompatible) {
+            super(marca, modelo, color, screenSize);
+            this.funcionalidades = funcionalidades;
+            this.istemaCompatible = istemaCompatible;
+        }
+
+        @Override
+        public String toString() {
+            return "marca=" + marca +
+                    ", modelo=" + modelo +
+                    ", color=" + color +
+                    ", Tamaño de Pantalla=" + screenSize +
+                    ", Funcionalidades=" + funcionalidades +
+                    ", Compatible con=" + sistemaCompatible;
+        }
+    }
+
+    public static void main(String[] args) {
+
+        SmartPhone smartPhone = new SmartPhone("Samsung", "S10", "Azul", 7.2,
+                8, "Android");
+
+        SmartWatch smartWatch = new SmartWatch("Xiaomi", "Mi Band 6", "Negro", 1.5,
+                3.5, "Bluetooth");
+
+        System.out.println("El smartphone es: " + smartPhone + "\nEl smartwatch es: " + smartWatch);
+
+    }
+
+}
