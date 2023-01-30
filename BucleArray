@@ -1,0 +1,13 @@
+public class LoopNombres {
+
+    public static void main(String[] args) {
+
+        String[] nombres = {"name1", "name2", "name3", "name4", "name5", "name6"};
+
+        for(int i = 0; i < nombres.length; i++){
+            String name = nombres[i];
+            System.out.println("El nombre número " + i + " es " + name);
+        }
+
+    }
+}
